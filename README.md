@@ -66,10 +66,10 @@ conn.send("Hello from the server!".encode())
 data = conn.recv(1024)
 print(f"Received from client: {data.decode()}")
 conn.close()
-server_socket.close()
+server_socket.close()```
 client.py
 
-import socket
+```import socket
 client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 client_socket.connect(('localhost', 8000))
 print(f"Client connected from: {client_socket.getsockname()}")
